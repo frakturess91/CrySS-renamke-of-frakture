@@ -26,7 +26,7 @@ local function notify(text)
 	StarterGui:SetCore(
 		"SendNotification",
 		{
-			Title = "FraktureSS",
+			Title = "Rc7",
 			Duration = 3,
 			Text = text
 		}
