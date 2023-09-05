@@ -152,6 +152,8 @@ local function Main()
 
 	scanGame()
 
+end
+
 if game:IsLoaded() then
 	pcall(Main)
 end
