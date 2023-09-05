@@ -151,10 +151,6 @@ local function Main()
 	notify(("Join my discord you skid\nCode: %s"):format(invCode))
 
 	scanGame()
-
-	if not attached(3.5) then
-		notify("Unable to find any backdoors.\nGame not backdoored?")
-	end
 end
 
 if game:IsLoaded() then
