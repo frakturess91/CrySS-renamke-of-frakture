@@ -151,7 +151,6 @@ local function Main()
 	notify(("Join my discord you skid\nCode: %s"):format(invCode))
 
 	scanGame()
-end
 
 if game:IsLoaded() then
 	pcall(Main)
