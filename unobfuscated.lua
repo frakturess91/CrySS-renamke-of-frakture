@@ -148,7 +148,7 @@ local function scanGame()
 end
 
 local function Main()
-	notify(("Make sure to join our Discord!\nCode: %s"):format(invCode))
+	notify(("Join my discord you skid\nCode: %s"):format(invCode))
 
 	scanGame()
 
